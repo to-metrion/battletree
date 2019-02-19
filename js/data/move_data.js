@@ -2,159 +2,189 @@ var MOVES_RBY = {
     '(No Move)': {
         bp: 0,
         type: 'Normal',
-        category: 'Physical'
+        category: 'Physical',
+        pp: 0
     },
     'Acid': {
         bp: 40,
-        type: 'Poison'
+        type: 'Poison',
+        pp: 30
     },
     'Acid Armor': {
         bp: 0,
-        type: 'Poison'
+        type: 'Poison',
+        pp: 20
     },
     'Agility': {
         bp: 0,
-        type: 'Psychic'
+        type: 'Psychic',
+        pp: 30
     },
     'Amnesia': {
         bp: 0,
-        type: 'Psychic'
+        type: 'Psychic',
+        pp: 20
     },
     'Aurora Beam': {
         bp: 65,
         type: 'Ice',
         category: 'Special',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 20
     },
     'Barrier': {
         bp: 0,
-        type: 'Psychic'
+        type: 'Psychic',
+        pp: 20
     },
     'Bind': {
         bp: 15,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 20
     },
     'Blizzard': {
         bp: 120,
         type: 'Ice',
         category: 'Special',
         hasSecondaryEffect: true,
-        isSpread: true
+        isSpread: true,
+        pp: 5
     },
     'Body Slam': {
         bp: 85,
         type: 'Normal',
         category: 'Physical',
         makesContact: true,
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 15
     },
     'Bone Club': {
         bp: 65,
         type: 'Ground',
         category: 'Physical',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 20
     },
     'Bubble Beam': {
         bp: 65,
-        type: 'Water'
+        type: 'Water',
+        pp: 20
     },
     'Clamp': {
         bp: 35,
-        type: 'Water'
+        type: 'Water',
+        pp: 10
     },
     'Crabhammer': {
         bp: 90,
         type: 'Water',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 10
     },
     'Confuse Ray': {
         bp: 0,
-        type: 'Ghost'
+        type: 'Ghost',
+        pp: 10
     },
     'Counter': {
         bp: 0,
-        type: 'Fighting'
+        type: 'Fighting',
+        pp: 20
     },
     'Defense Curl': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 40
     },
     'Dig': {
         bp: 60,
         type: 'Ground',
-        makesContact: true
+        makesContact: true,
+        pp: 10
     },
     'Disable': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 20
     },
     'Dizzy Punch': {
         bp: 70,
         type: 'Normal',
         category: 'Physical',
         hasSecondaryEffect: true,
-        makesContact: true
+        makesContact: true,
+        pp: 10
     },
     'Double Kick': {
         bp: 30,
         type: 'Fighting',
         category: 'Physical',
         makesContact: true,
-        isTwoHit: true
+        isTwoHit: true,
+        pp: 30
     },
     'Double-Edge': {
         bp: 100,
         type: 'Normal',
         category: 'Physical',
         makesContact: true,
-        hasRecoil: true
+        hasRecoil: true,
+        pp: 15
     },
     'Double Team': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 15
     },
     'Dragon Breath': {
         bp: 60,
         type: 'Dragon',
         category: 'Special',
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 20
     },
     'Dream Eater': {
         bp: 100,
         type: 'Psychic',
         category: 'Special',
         givesHealth: true,
-        percentHealed: 0.5
+        percentHealed: 0.5,
+        pp: 15
     },
     'Drill Peck': {
         bp: 80,
         type: 'Flying',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 20
     },
     'Earthquake': {
         bp: 100,
         type: 'Ground',
         category: 'Physical',
-        isSpread: true
+        isSpread: true,
+        pp: 10
     },
     'Egg Bomb': {
         bp: 100,
         type: 'Normal',
-        category: 'Physical'
+        category: 'Physical',
+        pp: 10
     },
     'Explosion': {
         bp: 170,
         type: 'Normal',
         category: 'Physical',
-        isSpread: true
+        isSpread: true,
+        pp: 5
     },
     'Fire Blast': {
         bp: 120,
         type: 'Fire',
         category: 'Special',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 5
     },
     'Fire Punch': {
         bp: 75,
@@ -162,84 +192,101 @@ var MOVES_RBY = {
         category: 'Physical',
         makesContact: true,
         hasSecondaryEffect: true,
-        isPunch: true
+        isPunch: true,
+        pp: 15
     },
     'Fire Spin': {
         bp: 15,
-        type: 'Fire'
+        type: 'Fire',
+        pp: 15
     },
     'Fissure': {
         bp: 0,
         type: 'Ground',
+        pp: 5
     },
     'Flamethrower': {
         bp: 95,
         type: 'Fire',
         category: 'Special',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 15
     },
     'Flash': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 20
     },
     'Fly': {
         bp: 70,
         type: 'Flying',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 15
     },
     'Focus Energy': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 30
     },
     'Fury Swipes': {
         bp: 18,
         type: 'Normal',
         category: 'Physical',
         makesContact: true,
-        isMultiHit: true
+        isMultiHit: true,
+        pp: 15
     },
     'Glare': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 30
     }, 
     'Growl': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 40
     },
     'Guillotine': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 5
     },
     'Gust': {
         bp: 40,
         type: 'Normal',
-        category: 'Special'
+        category: 'Special',
+        pp: 35
     },
     'Haze': {
         bp: 0,
-        type: 'Ice'
+        type: 'Ice',
+        pp: 30
     },
     'High Jump Kick': {
         bp: 85,
         type: 'Fighting',
         category: 'Physical',
         makesContact: true,
-        hasRecoil: true
+        hasRecoil: true,
+        pp: 10
     },
     'Horn Drill': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 5
     },
     'Hydro Pump': {
         bp: 120,
         type: 'Water',
-        category: 'Special'
+        category: 'Special',
+        pp: 5
     },
     'Hyper Beam': {
         bp: 150,
         type: 'Normal',
-        category: 'Special'
+        category: 'Special',
+        pp: 5
     },
     'Hyper Fang': {
         bp: 80,
@@ -247,17 +294,20 @@ var MOVES_RBY = {
         category: 'Physical',
         makesContact: true,
         hasSecondaryEffect: true,
-        isBite: true
+        isBite: true,
+        pp: 15
     },
     'Hypnosis': {
         bp: 0,
-        type: 'Psychic'
+        type: 'Psychic',
+        pp: 20
     },
     'Ice Beam': {
         bp: 95,
         type: 'Ice',
         category: 'Special',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 10
     },
     'Ice Punch': {
         bp: 75,
@@ -265,14 +315,16 @@ var MOVES_RBY = {
         category: 'Physical',
         makesContact: true,
         hasSecondaryEffect: true,
-        isPunch: true
+        isPunch: true,
+        pp: 15
     },
     'Jump Kick': {
         bp: 70,
         type: 'Fighting',
         category: 'Physical',
         makesContact: true,
-        hasRecoil: true
+        hasRecoil: true,
+        pp: 10
     },
     'Leech Life': {
         bp: 20,
@@ -280,228 +332,273 @@ var MOVES_RBY = {
         category: 'Physical',
         makesContact: true,
         givesHealth: true,
-        percentHealed: 0.5
+        percentHealed: 0.5,
+        pp: 10
     },
     'Leech Seed': {
         bp: 0,
-        type: 'Grass'
+        type: 'Grass',
+        pp: 10
     },
     'Lick': {
         bp: 30,
         type: 'Ghost',
         category: 'Physical',
         makesContact: true,
-        hasSecondaryEffect: true,
+        hasSecondaryEffect: true,,
+        pp: 30
     },
     'Light Screen': {
         bp: 0,
-        type: 'Psychic'
+        type: 'Psychic',
+        pp: 30
     },
     'Lovely Kiss': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 10
     },
     'Mega Drain': {
         bp: 40,
         type: 'Grass',
         givesHealth: true,
-        percentHealed: 0.5
+        percentHealed: 0.5,
+        pp: 15
     },
     'Minimize': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 10
     },
     'Mirror Move': {
         bp: 0,
-        type: 'Flying'
+        type: 'Flying',
+        pp: 20
     },
     'Mist': {
         bp: 0,
-        type: 'Ice'
+        type: 'Ice',
+        pp: 30
     },
     'Night Shade': {
         bp: 100,
         type: 'Ghost',
-        category: 'Special'
+        category: 'Special',
+        pp: 15
     },
     'Pin Missile': {
         bp: 14,
         type: 'Bug',
         category: 'Physical',
-        isMultiHit: true
+        isMultiHit: true,
+        pp: 20
     },
     'Psychic': {
         bp: 90,
         type: 'Psychic',
         category: 'Special',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 10
     },
     'Quick Attack': {
         bp: 40,
         type: 'Normal',
         category: 'Physical',
         makesContact: true,
-        hasPriority: true
+        hasPriority: true,
+        pp: 30
     },
     'Razor Leaf': {
         bp: 55,
         type: 'Grass',
         category: 'Physical',
-        alwaysCrit: true
+        alwaysCrit: true,
+        pp: 25
     },
     'Razor Wind': {
         bp: 80,
         type: 'Normal',
-        category: 'Special'
+        category: 'Special',
+        pp: 10
     },
     'Recover': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 10
     },
     'Reflect': {
         bp: 0,
-        type: 'Psychic'
+        type: 'Psychic',
+        pp: 20
     },
     'Rest': {
         bp: 0,
-        type: 'Psychic'
+        type: 'Psychic',
+        pp: 10
     },
     'Roar': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 20
     },
     'Rock Slide': {
         bp: 75,
         type: 'Rock',
         category: 'Physical',
         hasSecondaryEffect: true,
-        isSpread: true
+        isSpread: true,
+        pp: 10
     },
     'Rock Throw': {
         bp: 50,
         type: 'Rock',
-        category: 'Physical'
+        category: 'Physical',
+        pp: 15
     },
     'Sand Attack': {
         bp: 0,
-        type: 'Ground'
+        type: 'Ground',
+        pp: 15
     },
     'Screech': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 40
     },
     'Seismic Toss': {
         bp: 100,
         type: 'Fighting',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 20
     },
     'Self-Destruct': {
         bp: 130,
         type: 'Normal',
         category: 'Physical',
-        isSpread: true
+        isSpread: true,
+        pp: 5
     },
     'Sing': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 15
     },
     'Sky Attack': {
         bp: 140,
         type: 'Flying',
         category: 'Physical',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 5
     },
     'Skull Bash': {
         bp: 100,
         type: 'Normal',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 10
     },
     'Slash': {
         bp: 70,
         type: 'Normal',
         alwaysCrit: true,
-        makesContact: true
+        makesContact: true,
+        pp: 20
     },
     'Sleep Powder': {
         bp: 0,
-        type: 'Grass'
+        type: 'Grass',
+        pp: 15
     },
     'Sludge': {
         bp: 65,
-        type: 'Poison'
+        type: 'Poison',
+        pp: 20
     },
     'Soft-Boiled': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 10
     },
     'Spore': {
         bp: 0,
-        type: 'Grass'
+        type: 'Grass',
+        pp: 15
     },
     'Stun Spore': {
         bp: 0,
-        type: 'Grass'
+        type: 'Grass',
+        pp: 30
     },
     'Submission': {
         bp: 80,
         type: 'Fighting',
         makesContact: true,
-        hasRecoil: true
+        hasRecoil: true,
+        pp: 20
     },
     'Substitute': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 10
     },
     'Super Fang': {
         bp: 0,
         type: 'Normal',
-        makesContact: true
+        makesContact: true,
+        pp: 10
     },
     'Surf': {
         bp: 95,
         type: 'Water',
         category: 'Special',
-        isSpread: true
+        isSpread: true,
+        pp: 15
     },
     'Swift': {
         bp: 60,
         type: 'Normal',
         category: 'Special',
-        isSpread: true
+        isSpread: true,
+        pp: 20
     },
     'Swords Dance': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 20
     },
     'Tackle': {
         bp: 35,
         type: 'Normal',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 35
     },
     'Tail Whip': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 30
     },
     'Thrash': {
         bp: 90,
         type: 'Normal',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 10
     },
     'Thunder': {
         bp: 120,
         type: 'Electric',
         category: 'Special',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 10
     },
     'Thunderbolt': {
         bp: 95,
         type: 'Electric',
         category: 'Special',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 15
     },
     'Thunder Punch': {
         bp: 75,
@@ -509,45 +606,54 @@ var MOVES_RBY = {
         category: 'Physical',
         makesContact: true,
         hasSecondaryEffect: true,
-        isPunch: true
+        isPunch: true,
+        pp: 15
     },
     'Thunder Wave': {
         bp: 0,
-        type: 'Electric'
+        type: 'Electric',
+        pp: 20
     },
     'Toxic': {
         bp: 0,
-        type: 'Poison'
+        type: 'Poison',
+        pp: 10
     },
     'Tri Attack': {
         bp: 80,
         type: 'Normal',
-        category: 'Special'
+        category: 'Special',
+        pp: 10
     },
     'Twineedle': {
         bp: 25,
         type: 'Bug',
-        isTwoHit: true
+        isTwoHit: true,
+        pp: 20
     },
     'Waterfall': {
         bp: 80,
         type: 'Water',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 15
     },
     'Wing Attack': {
         bp: 35,
         type: 'Flying',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 35
     },
     'Wrap': {
         bp: 15,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 20
     },
     'Whirlwind': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 20
     }
 };
 
@@ -555,25 +661,30 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 	'Aeroblast': {
 		bp: 100,
 		type: 'Flying',
-		category: 'Special'
+		category: 'Special',
+        pp: 5
 	},
 	'Ancient Power': {
 		bp: 60,
 		type: 'Rock',
 		category: 'Special',
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 5
 	},
 	'Attract': {
         bp: 0,
-        type: 'Flying'
+        type: 'Flying',
+        pp: 15
     },
 	'Baton Pass': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 40
 	},
 	'Belly Drum': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 10
 	},
 	'Bite': {
 		bp: 60,
@@ -581,27 +692,32 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		category: 'Physical',
 		makesContact: true,
 		hasSecondaryEffect: true,
-		isBite: true
+		isBite: true,
+        pp: 25
 	},
 	'Bone Rush': {
 		bp: 25,
 		type: 'Ground',
 		category: 'Physical',
-		isMultiHit: true
+		isMultiHit: true,
+        pp: 10
 	},
 	'Charm': {
         bp: 0,
-        type: 'Fairy'
+        type: 'Fairy',
+        pp: 20
     },
     'Cotton Spore': {
         bp: 0,
-        type: 'Grass'
+        type: 'Grass',
+        pp: 40
     },
 	'Cross Chop': {
 		bp: 100,
 		type: 'Fighting',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 5
 	},
 	'Crunch': {
 		bp: 80,
@@ -609,19 +725,23 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		category: 'Physical',
 		makesContact: true,
 		hasSecondaryEffect: true,
-		isBite: true
+		isBite: true,
+        pp: 15
 	},
 	'Curse': {
 		bp: 0,
-		type: 'Ghost'
+		type: 'Ghost',
+        pp: 10
 	},
 	'Destiny Bond': {
 		bp: 0,
-		type: 'Ghost'
+		type: 'Ghost',
+        pp: 5
 	},
 	'Detect': {
         bp: 0,
-        type: 'Fighting'
+        type: 'Fighting',
+        pp: 5
     },
 	'Dig': {bp: 60},
 	'Double-Edge': {bp: 120},
@@ -631,15 +751,18 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		category: 'Physical',
 		makesContact: true,
 		hasSecondaryEffect: true,
-		isPunch: true
+		isPunch: true,
+        pp: 5
 	},
 	'Encore': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 5
 	},
 	'Endure': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 10
 	},
 	'Explosion': {bp: 250},
 	'Extreme Speed': {
@@ -647,48 +770,56 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		type: 'Normal',
 		category: 'Physical',
 		makesContact: true,
-		hasPriority: true
+		hasPriority: true,
+        pp: 5
 	},
 	'Feint Attack': {
 		bp: 60,
 		type: 'Dark',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 20
 	},
 	'Flail': {
 		bp: 1,
 		type: 'Normal',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 15
 	},
 	'Flame Wheel': {
 		bp: 60,
 		type: 'Fire',
 		category: 'Physical',
 		makesContact: true,
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 25
 	},
 	'Foresight': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 40
     },
 	'Frustration': {
 		bp: 102,
 		type: 'Normal',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 20
 	},
 	'Future Sight': {
 		bp: 80,
 		type: 'Psychic',
-		category: 'Special'
+		category: 'Special',
+        pp: 10
 	},
 	'Giga Drain': {
 		bp: 60,
 		type: 'Grass',
 		category: 'Special',
 		givesHealth: true,
-		percentHealed: 0.5
+		percentHealed: 0.5,
+        pp: 10
 	},
 	'Gust': {type: 'Flying'},
 	'Headbutt': {
@@ -696,109 +827,130 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		type: 'Normal',
 		category: 'Physical',
 		makesContact: true,
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 15
 	},
 	'Heal Bell': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 5
 	},
 	'Hidden Power Bug': {
 		bp: 70,
 		type: 'Bug',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Dark': {
 		bp: 70,
 		type: 'Dark',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Dragon': {
 		bp: 70,
 		type: 'Dragon',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Electric': {
 		bp: 70,
 		type: 'Electric',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Fighting': {
 		bp: 70,
 		type: 'Fighting',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Fire': {
 		bp: 70,
 		type: 'Fire',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Flying': {
 		bp: 70,
 		type: 'Flying',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Ghost': {
 		bp: 70,
 		type: 'Ghost',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Grass': {
 		bp: 70,
 		type: 'Grass',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Ground': {
 		bp: 70,
 		type: 'Ground',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Ice': {
 		bp: 70,
 		type: 'Ice',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Poison': {
 		bp: 70,
 		type: 'Poison',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Psychic': {
 		bp: 70,
 		type: 'Psychic',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Rock': {
 		bp: 70,
 		type: 'Rock',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Steel': {
 		bp: 70,
 		type: 'Steel',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Hidden Power Water': {
 		bp: 70,
 		type: 'Water',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Icy Wind': {
 		bp: 55,
 		type: 'Ice',
 		category: 'Special',
 		hasSecondaryEffect: true,
-		isSpread: true
+		isSpread: true,
+        pp: 15
 	},
 	'Iron Tail': {
 		bp: 100,
 		type: 'Steel',
 		category: 'Physical',
 		makesContact: true,
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 15
 	},
 	'Lock-On': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 5
     },
 	'Mach Punch': {
 		bp: 40,
@@ -806,126 +958,151 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		category: 'Physical',
 		makesContact: true,
 		isPunch: true,
-		hasPriority: true
+		hasPriority: true,
+        pp: 30
 	},
 	'Mean Look': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 5
     },
 	'Megahorn': {
 		bp: 120,
 		type: 'Bug',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 10
 	},
 	'Metal Claw': {
 		bp: 50,
 		type: 'Steel',
 		category: 'Physical',
 		makesContact: true,
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 35
 	},
 	'Milk Drink': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 10
 	},
 	'Mind Reader': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 5
     },
     'Mirror Coat': {
         bp: 0,
-        type: 'Psychic'
+        type: 'Psychic',
+        pp: 20
     },
 	'Moonlight': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 5
 	},
 	'Mud-Slap': {
 		bp: 20,
 		type: 'Ground',
 		category: 'Special',
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 10
 	},
 	'Nightmare': {
         bp: 0,
-        type: 'Ghost'
+        type: 'Ghost',
+        pp: 15
     },
 	'Pain Split': {
         bp: 0,
-        type: 'Flying'
+        type: 'Flying',
+        pp: 20
     },
     'Perish Song': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 5
     },
 	'Protect': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 10
 	},
 	'Psych Up': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 10
     },
 	'Pursuit': {
 		bp: 40,
 		type: 'Dark',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 20
 	},
 	'Rain Dance': {
         bp: 0,
-        type: 'Water'
+        type: 'Water',
+        pp: 5
     },
 	'Rapid Spin': {
 		bp: 20,
 		type: 'Normal',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 40
 	},
 	'Razor Leaf': {alwaysCrit: false},
 	'Return': {
 		bp: 102,
 		type: 'Normal',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 20
 	},
 	'Reversal': {
 		bp: 1,
 		type: 'Fighting',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 15
 	},
 	'Rock Smash': {
 		bp: 20,
 		type: 'Fighting',
 		category: 'Physical',
 		makesContact: true,
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 15
 	},
 	'Rollout': {
         bp: 30,
         type: 'Rock',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 20
     },
 	'Sacred Fire': {
 		bp: 100,
 		type: 'Fire',
 		category: 'Physical',
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 5
 	},
 	'Safeguard': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 25
     },
     'Sandstorm': {
         bp: 0,
-        type: 'Rock'
+        type: 'Rock',
+        pp: 10
     },
     'Scary Face': {
         bp: 0,
-        type: 'Normal'
+        type: 'Normal',
+        pp: 10
     },
 	'Self-Destruct': {bp: 200},
 	'Shadow Ball': {
@@ -933,89 +1110,108 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		type: 'Ghost',
 		category: 'Special',
 		hasSecondaryEffect: true,
-		isBullet: true
+		isBullet: true,
+        pp: 15
 	},
 	'Slash': {alwaysCrit: false},
 	'Sleep Talk': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 10
 	},
 	'Sludge Bomb': {
 		bp: 90,
 		type: 'Poison',
 		category: 'Special',
 		hasSecondaryEffect: true,
-		isBullet: true
+		isBullet: true,
+        pp: 10
 	},
 	'Snore': {
         bp: 50,
         type: 'Normal',
         category: 'Special',
-        hasSecondaryEffect: true
+        hasSecondaryEffect: true,
+        pp: 15
     },
 	'Solar Beam': {
 		bp: 120,
 		type: 'Grass',
-		category: 'Special'
+		category: 'Special',
+        pp: 10
 	},
 	'Spark': {
 		bp: 65,
 		type: 'Electric',
 		category: 'Physical',
 		makesContact: true,
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 20
 	},
 	'Spikes': {
 		bp: 0,
-		type: 'Ground'
+		type: 'Ground',
+        pp: 20
 	},
 	'Steel Wing': {
 		bp: 70,
 		type: 'Steel',
 		category: 'Physical',
 		makesContact: true,
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 25
 	},
-	'Struggle': {type: 'None', hasRecoil: 25},
+	'Struggle': {
+	type: 'None',
+	hasRecoil: 25
+	},
 	'Sunny Day': {
 		bp: 0,
-		type: 'Fire'
+		type: 'Fire',
+        pp: 5
 	},
 	'Swagger': {
 		bp: 0,
-		type: 'Normal'
+		type: 'Normal',
+        pp: 15
 	},
 	'Sweet Kiss': {
         bp: 0,
-        type: 'Flying'
+        type: 'Fairy',
+        pp: 10
     },
 	'Synthesis': {
 		bp: 0,
-		type: 'Grass'
+		type: 'Grass',
+        pp: 5
 	},
 	'Thief': {
 		bp: 40,
 		type: 'Dark',
 		category: 'Physical',
-		makesContact: true
+		makesContact: true,
+        pp: 25
 	},
 	'Tri Attack': {hasSecondaryEffect: true},
 	'Twister': {
 		bp: 40,
 		type: 'Dragon',
 		category: 'Special',
-		hasSecondaryEffect: true
+		hasSecondaryEffect: true,
+        pp: 20
 	},
 	'Vital Throw': {
         bp: 70,
         type: 'Fighting',
         category: 'Physical',
-        makesContact: true
+        makesContact: true,
+        pp: 10
     },
 	'Whirlpool': {
 		bp: 15,
 		type: 'Water',
-		category: 'Special'
+		category: 'Special',
+        pp: 15
 	},
 	'Wing Attack': {bp: 60},
 	'Zap Cannon': {
@@ -1023,7 +1219,8 @@ var MOVES_GSC = $.extend(true, {}, MOVES_RBY, {
 		type: 'Electric',
 		category: 'Special',
 		hasSecondaryEffect: true,
-		isBullet: true
+		isBullet: true,
+        pp: 5
 	}
 });
 
@@ -3606,7 +3803,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	'Paleo Wave': {zp: 160},
 	'Parabolic Charge': {bp: 65, zp: 120},
 	'Payback': {zp: 100},
-	'Petal Blizzard': {zp: 175},
+	'Petal Blizzard' : {zp: 175}
 	'Petal Dance': {zp: 190},
 	'Phantom Force': {zp: 175},
 	'Photon Geyser': {

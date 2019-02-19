@@ -3606,7 +3606,7 @@ var MOVES_SM = $.extend(true, {}, MOVES_XY, {
 	'Paleo Wave': {zp: 160},
 	'Parabolic Charge': {bp: 65, zp: 120},
 	'Payback': {zp: 100},
-	'Petal Blizzard': {zp: 175}
+	'Petal Blizzard': {zp: 175},
 	'Petal Dance': {zp: 190},
 	'Phantom Force': {zp: 175},
 	'Photon Geyser': {

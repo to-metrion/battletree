@@ -345,7 +345,7 @@ var MOVES_RBY = {
         type: 'Ghost',
         category: 'Physical',
         makesContact: true,
-        hasSecondaryEffect: true,,
+        hasSecondaryEffect: true,
         pp: 30
     },
     'Light Screen': {

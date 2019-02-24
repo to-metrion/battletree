@@ -364,7 +364,7 @@ function getDamageResult(attacker, defender, move, field) {
 		bpMods.push(0x1333);
 		description.attackerAbility = attacker.ability;
 	}
-	
+
 	if (field.isBattery && move.category === "Special") {
 		bpMods.push(0x14CD);
 		description.isBattery = true;

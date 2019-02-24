@@ -138,8 +138,7 @@ html, body {
 }
 .wrapper {
     padding: 0 1em;
-    max-width: 1247px;
-    margin: 0 auto;
+    max-width: 1347px;
 }
 div.wrapper > div > span {
     padding-right: 5px;
@@ -184,10 +183,10 @@ th {
 }
 
 .poke-info {
-    width: 28em;
+    width: 31em;
 }
 .field-info, .poke-import {
-    width: 28em;
+    width: 27em;
 }
 .holder-0 {
     position: absolute;

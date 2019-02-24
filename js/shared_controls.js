@@ -312,6 +312,8 @@ $(".move-selector").change(function () {
 	moveGroupObj.children(".move-type").val(move.type);
 	moveGroupObj.children(".move-cat").val(move.category);
 	moveGroupObj.children(".move-crit").prop("checked", move.alwaysCrit === true);
+	moveGroupObj.children(".move-pp").val(move.pp);
+	moveGroupObj.children("#move-pp-total").html(move.pp);
 	moveGroupObj.children(".metronome").prop("disabled", !!move.dropsStats);
 	if (move.isMultiHit) {
 		moveGroupObj.children(".stat-drops").hide();
@@ -557,6 +559,7 @@ function Pokemon(pokeInfo) {
 				type: defaultDetails.type,
 				category: defaultDetails.category,
 				isCrit: !!defaultDetails.alwaysCrit,
+				pp: defaultDetails.pp,
 				hits: defaultDetails.isMultiHit ? ((this.ability === "Skill Link" || this.item === "Grip Claw") ? 5 : 3) : defaultDetails.isTwoHit ? 2 : 1,
 				usedTimes: defaultDetails.usedTimes
 			}));

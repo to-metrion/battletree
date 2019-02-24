@@ -302,6 +302,10 @@ $(".status").bind("keyup change", function () {
 	}
 });
 
+$(".ability").change(function () {
+	checkPressure();
+});
+
 var lockerMove = "";
 // auto-update move details on select
 $(".move-selector").change(function () {
@@ -1013,6 +1017,27 @@ function loadDefaultLists() {
 
 function bothPokemon(selector) {
 	return "#p1 " + selector + ", #p2 " + selector; 
+}
+
+function checkPressure() {
+	if ($("#p1 .ability").val() === "Pressure") {
+		for (var i = 1; i < 5; i++) {
+			$("#p2").find(".move" + i + " .move-pp").attr("step", 2);
+		}
+	} else {
+		for (var i = 1; i < 5; i++) {
+			$("#p2").find(".move" + i + " .move-pp").attr("step", 1);
+		}
+	}
+	if ($("#p2 .ability").val() === "Pressure") {
+		for (var i = 1; i < 5; i++) {
+			$("#p1").find(".move" + i + " .move-pp").attr("step", 2);
+		}
+	} else {
+		for (var i = 1; i < 5; i++) {
+			$("#p1").find(".move" + i + " .move-pp").attr("step", 1);
+		}
+	}
 }
 
 function loadCustomList(id) {

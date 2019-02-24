@@ -138,7 +138,8 @@ html, body {
 }
 .wrapper {
     padding: 0 1em;
-    max-width: 1347px;
+    max-width: 1247px;
+    margin: 0 auto;
 }
 div.wrapper > div > span {
     padding-right: 5px;
@@ -183,10 +184,10 @@ th {
 }
 
 .poke-info {
-    width: 31em;
+    width: 28em;
 }
 .field-info, .poke-import {
-    width: 27em;
+    width: 28em;
 }
 .holder-0 {
     position: absolute;
@@ -350,7 +351,7 @@ th {
 select.toxic-counter {
     width: 4.5em;
 }
-.move-selector, .move-bp, .move-type, .move-cat, .move-hits {
+.move-selector, .move-bp, .move-type, .move-cat, .move-hits, .move-pp, .move-pp-total {
     font-size: 0.9em;
 }
 .move-selector {
@@ -428,7 +429,7 @@ select.toxic-counter {
 }
 
 .import-team-text {
-    min-width: 32em;
+    min-width: 338px;
     min-height: 10em;
     resize: both;
 }

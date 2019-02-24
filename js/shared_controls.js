@@ -313,7 +313,7 @@ $(".move-selector").change(function () {
 	moveGroupObj.children(".move-cat").val(move.category);
 	moveGroupObj.children(".move-crit").prop("checked", move.alwaysCrit === true);
 	moveGroupObj.children(".move-pp").val(move.pp);
-	moveGroupObj.children("#move-pp-total").html(move.pp);
+	moveGroupObj.children(".move-pp").attr("max", move.pp);
 	moveGroupObj.children(".metronome").prop("disabled", !!move.dropsStats);
 	if (move.isMultiHit) {
 		moveGroupObj.children(".stat-drops").hide();

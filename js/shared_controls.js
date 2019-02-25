@@ -1015,24 +1015,15 @@ function bothPokemon(selector) {
 }
 
 function checkPressure() {
-	if ($("#p1 .ability").val() === "Pressure") {
-		for (var i = 1; i < 5; i++) {
-			$("#p2").find(".move" + i + " .move-pp").attr("step", 2);
-		}
-	} else {
-		for (var i = 1; i < 5; i++) {
-			$("#p2").find(".move" + i + " .move-pp").attr("step", 1);
-		}
-	}
-	if ($("#p2 .ability").val() === "Pressure") {
-		for (var i = 1; i < 5; i++) {
-			$("#p1").find(".move" + i + " .move-pp").attr("step", 2);
-		}
-	} else {
-		for (var i = 1; i < 5; i++) {
-			$("#p1").find(".move" + i + " .move-pp").attr("step", 1);
-		}
-	}
+    for (var j = 1; j < 3; j++) {
+        for (var i = 1; i < 5; i++) {
+            var t = $("#p" + (3-j) ).find(".move" + i + " .move-pp");
+            var isEnemyPressure = $("#p" + j + " .ability").val() === "Pressure";
+            t.attr("max",  t.val());
+        t.attr("min",  isEnemyPressure ? (t.val() % 2 * (-1)) : 0);
+            t.attr("step", isEnemyPressure ? 2 : 1);
+        }
+    }
 }
 
 function loadCustomList(id) {

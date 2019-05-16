@@ -845,20 +845,60 @@ function getModifiedStat(stat, mod) {
 			stat;
 }
 
-function getFinalSpeed(pokemon, weather) {
+function getFinalSpeed(pokemon, field, side) {
+	var weather = field.getWeather();
+	var terrain = side.terrain;
 	var speed = getModifiedStat(pokemon.rawStats[SP], pokemon.boosts[SP]);
-	if (pokemon.item === "Choice Scarf") {
-		speed = Math.floor(speed * 1.5);
-	} else if (["Macho Brace", "Iron Ball"].indexOf(pokemon.item) !== -1) {
-		speed = Math.floor(speed / 2);
-	}
-	if ((pokemon.ability === "Chlorophyll" && weather.indexOf("Sun") !== -1) ||
-            (pokemon.ability === "Sand Rush" && weather === "Sand") ||
-            (pokemon.ability === "Swift Swim" && weather.indexOf("Rain") !== -1) ||
-            (pokemon.ability === "Slush Rush" && weather === "Hail")) {
+	//ITEM EFFECTS
+	if (pokemon.hasItem("Choice Scarf")) {
+		speed = pokeRound(speed * 1.5);
+	} else if (pokemon.hasItem("Macho Brace", "Iron Ball")) {
+		speed = pokeRound(speed / 2);
+	} else if (pokemon.hasItem("Quick Powder") && pokemon.named("Ditto")) {
 		speed *= 2;
 	}
+	if ((pokemon.hasAbility("Chlorophyll") && weather.indexOf("Sun") !== -1) ||
+            (pokemon.hasAbility("Sand Rush") && weather === "Sand") ||
+            (pokemon.hasAbility("Swift Swim") && weather.indexOf("Rain") !== -1) ||
+            (pokemon.hasAbility("Slush Rush") && weather === "Hail")) {
+		speed *= 2;
+	} else if (pokemon.hasAbility("Quick Feet") && !pokemon.hasStatus("Healthy")) {
+		speed = pokeRound(speed * 1.5);
+	} else if (pokemon.hasAbility("Slow Start") && pokemon.abilityOn) {
+		speed = pokeRound(speed / 2);
+	} else if ((pokemon.hasAbility("Surge Surfer") && terrain === "Electric") ||
+						 (pokemon.hasAbility("Unburden") && pokemon.abilityOn)) {
+		speed *= 2;
+	}
+	//FIELD EFFECTS (Tailwind)
+	if (side.isTailwind) {
+		speed *= 2;
+	}
+
+	//PARALYSIS
+	if (pokemon.hasStatus("Paralyzed") && !pokemon.hasAbility("Quick Feet")) {
+		if (gen < 7) {
+			speed = pokeRound(speed * 0.25);
+		} else {
+			speed = pokeRound(speed * 0.5);
+		}
+	}
+
+	if (gen <= 2) {
+		speed = Math.min(999, speed);
+	}
+	speed = Math.max(1, speed);
+
+	printStat(pokemon, SP, speed);
 	return speed;
+}
+
+function printStat(pokemon, statName, stat) {
+	if (typeof pokemon.pokeInfo === "string") {
+		return;
+	} else {
+		pokemon.pokeInfo.find("." + statName + " .totalMod").text(stat);
+	}
 }
 
 function checkAirLock(pokemon, field) {
